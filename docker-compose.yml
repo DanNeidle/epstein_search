@@ -1,0 +1,42 @@
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.12.2
+    container_name: sist2-es
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - xpack.security.enrollment.enabled=false
+      - ES_JAVA_OPTS=-Xms16g -Xmx16g
+    volumes:
+      - ./esdata:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+
+  sist2-admin:
+    image: simon987/sist2
+    container_name: sist2-index
+    volumes:
+      - ./data:/documents:ro
+      - ./sist2:/data
+    entrypoint: ["tail", "-f", "/dev/null"]
+    depends_on:
+      - elasticsearch
+
+  sist2-web:
+    image: simon987/sist2
+    container_name: sist2-web
+    ports:
+      - "1997:8080"
+    volumes:
+      - ./sist2:/data
+      - ./data:/documents:ro
+    command: ["web", "--bind", "0.0.0.0:8080", "--es-url", "http://elasticsearch:9200", "/data/index.sist2"]
+    depends_on:
+      - elasticsearch

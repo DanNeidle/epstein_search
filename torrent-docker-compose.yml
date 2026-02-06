@@ -1,0 +1,17 @@
+services:
+  qbittorrent:
+    image: lscr.io/linuxserver/qbittorrent:latest
+    container_name: qbittorrent
+    environment:
+      - PUID=1000   # Set to your user ID (run `id -u`)
+      - PGID=1000   # Set to your group ID (run `id -g`)
+      - TZ=Etc/UTC  # Set to your timezone
+      - WEBUI_PORT=8080
+    volumes:
+      - ./config:/config
+      - ./downloads:/downloads
+    ports:
+      - 1992:8080
+      - 54321:54321
+      - 54321:54321/udp
+    restart: unless-stopped

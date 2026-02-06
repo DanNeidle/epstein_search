@@ -2,7 +2,10 @@
 
 The DOJ search is rubbish. Other public searches don't have all the documents.
 
-The solution: if you have a Linux PC that's reasonably modern, with 32GB+ memory 200GB SSD drive space
+The solution: spin up your own search engine. 
+You'll need a Linux PC or Mac that's reasonably modern, with 32GB+ memory 200GB SSD drive space. 
+Less memory should be okay but you may need to adjust the settings.
+May work on Windows - don't know.
 
 1. go  yung-megafone's Epstein-Files GitHub and use the "magnet" links to download datasets 8 to 12. 
 https://github.com/yung-megafone/Epstein-Files

@@ -1,11 +1,16 @@
 *How to make a private Epstein files search engine - now updated with AI/Claude*
+The DOJ search is rubbish. Other public searches don't have all the documents. The solution: spin up your own search engine. Add a bit of AI.
 
-The DOJ search is rubbish. Other public searches don't have all the documents.
+© 2025 Dan Neidle, with Claude/AI elements contributed by SH. 
+This work is licensed under the Creative Commons Attribution 4.0 International Licence (CC BY 4.0).
+You are free to share and adapt this material for any purpose, including commercially, provided appropriate credit is given.
 
-The solution: spin up your own search engine. 
-You'll need a Linux PC or Mac that's reasonably modern, with 32GB+ memory 200GB SSD drive space. 
-Less memory should be okay but you may need to adjust the settings.
-May work on Windows - don't know.
+Requirements:
+- a Linux PC or Mac that's reasonably modern, with 32GB+ memory and 200GB+ SSD drive space. 
+- Less memory should be okay but you may need to adjust the settings.
+- May work on Windows - don't know.
+
+Steps to setup archive and search:
 
 1. go to yung-megafone's Epstein-Files GitHub and use the "magnet" links to download datasets 8 to 12. 
 https://github.com/yung-megafone/Epstein-Files

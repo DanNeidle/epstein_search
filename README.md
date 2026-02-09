@@ -1,4 +1,4 @@
-*How to make a private Epstein files search engine*
+*How to make a private Epstein files search engine - now updated with AI/Claude*
 
 The DOJ search is rubbish. Other public searches don't have all the documents.
 
@@ -18,9 +18,9 @@ Surprisingly fast to download if you have a good connection.
 4. This is not legal advice, but personally I immediately deleted everything left - files that aren't PDFs. 
 These include movie files, images etc. I don't want to know what's on them, and I certainly don't want legal liability for having them.
 
-6. Now we need to index the files, make them searchable and create a UI. That's all done with the docker-compose.yml in this repo.
+5. Now we need to index the files, make them searchable and create a UI. That's all done with the docker-compose.yml in this repo.
 
-7. Get sist2 to index the files:
+6. Get sist2 to index the files:
 
 docker compose exec -T sist2-admin /root/sist2 scan \
   --output /data/index.sist2 \
@@ -30,7 +30,7 @@ docker compose exec -T sist2-admin /root/sist2 scan \
 
 This will take around an hour. It will look like it's doing nothing, but it (probably) isn't. 
 
-5. get elasticsearch to digest the index:
+7. get elasticsearch to digest the index:
 
 docker compose exec -T sist2-admin /root/sist2 index \
   --threads 16 \
@@ -42,6 +42,23 @@ docker compose exec -T sist2-admin /root/sist2 index \
 This will take a few minutes
 
 Then go to localhost:1997 and you have a fantastic UI and search.
+
+*New AI components (for which many thanks to SH*
+
+ep.py wraps the Elasticsearch API into a command line utility. It's primarily designed to be used by AI agents. It has no dependencies, so no need for a venv. Hashes the first 500 chars of content to flag duplicates (many documents appear across multiple Bates ranges). Stops the AI from reporting the same email three times.
+
+With almost no setup, Claude will then undertake research in a remarkably easy and useful way. 
+
+Once sist2/es is working, there are just two more steps to use Claude:
+
+1. Install Claude, using this link [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview)
+2. go to your epstein folder and type "claude". Then just ask your question. See claude_example.txt for an example.
+
+Standard AI caveats:
+- **OCR quality varies wildly**. Some documents are near-perfect, others are garbled. Always verify findings against the original PDFs via the sist2 links.
+- **Document counts are approximate**. A `match` query for "Clinton" will catch incidental mentions, not just substantive connections.
+- **The AI can hallucinate connections**. It's good at finding and summarizing what's in the documents, but always check the cited Bates numbers yourself.
+- **Duplicate documents** are common across Bates ranges. The near-duplicate detection helps but isn't perfect.
 
 WARNING: if you only search for e.g. Mandleson then you will see nothing (very) disturbing. 
 There are, however, very disturbing emails in the files which you may come across by accident. 

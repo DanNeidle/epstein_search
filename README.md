@@ -1,4 +1,5 @@
-*How to make a private Epstein files search engine - now updated with AI/Claude*
+*How to make a private Epstein files search engine - now updated to add AI/Claude autonomous searches*
+
 The DOJ search is rubbish. Other public searches don't have all the documents. The solution: spin up your own search engine. Add a bit of AI.
 
 © 2025 Dan Neidle, with Claude/AI elements contributed by SH. 

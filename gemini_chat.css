@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0');
+
+html, body, [data-testid="stAppViewContainer"], [data-testid="stSidebar"] {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.material-symbols-rounded,
+[class*="material-symbols"],
+[data-testid="stIconMaterial"] {
+    font-family: "Material Symbols Rounded" !important;
+    font-weight: normal;
+    font-style: normal;
+}
+
+[data-testid="stAppViewContainer"] {
+    background: #f5f7ff;
+    color: #1f2a44;
+}
+
+[data-testid="stHeader"] {
+    background: #1133AF !important;
+}
+
+[data-testid="stToolbar"] {
+    background: #1133AF !important;
+}
+
+[data-testid="stDecoration"] {
+    background: #1133AF !important;
+}
+
+[data-testid="stHeader"] button[aria-label*="sidebar"],
+[data-testid="stHeader"] button[title*="sidebar"],
+[data-testid="stHeader"] [data-testid="stSidebarCollapseButton"] button {
+    color: #ffffff !important;
+    background: transparent !important;
+}
+
+[data-testid="stHeader"] button[aria-label*="sidebar"] span,
+[data-testid="stHeader"] button[title*="sidebar"] span,
+[data-testid="stHeader"] [data-testid="stSidebarCollapseButton"] button span,
+[data-testid="stHeader"] [data-testid="stSidebarCollapseButton"] button svg {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+}
+
+[data-testid="stBottomBlockContainer"] {
+    background: #1133AF !important;
+    color: #ffffff !important;
+}
+
+[data-testid="stAppViewContainer"] p,
+[data-testid="stAppViewContainer"] li,
+[data-testid="stAppViewContainer"] span,
+[data-testid="stAppViewContainer"] label,
+[data-testid="stAppViewContainer"] div {
+    color: #1f2a44;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #1133AF;
+}
+
+[data-testid="stSidebar"] {
+    background: #1133AF;
+    padding-top: 0.6rem;
+}
+
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] span {
+    color: #ffffff;
+}
+
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3,
+[data-testid="stSidebar"] h4,
+[data-testid="stSidebar"] h5,
+[data-testid="stSidebar"] h6 {
+    color: #ffffff !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] {
+    color: #ffffff;
+}
+
+[data-testid="stSidebar"] hr {
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+[data-testid="stSidebar"] .stTextInput input,
+[data-testid="stSidebar"] .stSelectbox div[data-baseweb="select"] > div,
+[data-testid="stSidebar"] .stTextArea textarea,
+[data-testid="stSidebar"] .stNumberInput input {
+    background: #ffffff !important;
+    color: #1f2a44 !important;
+    caret-color: #1133AF !important;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+[data-testid="stAppViewContainer"] .stTextInput input,
+[data-testid="stAppViewContainer"] .stTextArea textarea,
+[data-testid="stAppViewContainer"] .stNumberInput input {
+    caret-color: #1133AF !important;
+}
+
+[data-testid="stSidebar"] .stTextInput input:focus,
+[data-testid="stSidebar"] .stTextArea textarea:focus,
+[data-testid="stSidebar"] .stNumberInput input:focus {
+    outline: 2px solid rgba(255,255,255,0.7) !important;
+    outline-offset: 1px;
+}
+
+[data-testid="stSidebar"] .stTextInput input::placeholder {
+    color: #6a7696 !important;
+}
+
+/* Restore native inline password-toggle icon button in inputs */
+[data-testid="stSidebar"] .stTextInput div[data-baseweb="input"] {
+    background: #ffffff !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(255,255,255,0.5) !important;
+}
+
+[data-testid="stSidebar"] .stTextInput div[data-baseweb="input"] > div {
+    background: transparent !important;
+}
+
+[data-testid="stSidebar"] .stTextInput div[data-baseweb="input"] button[aria-label*="password"] {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #111111 !important;
+    min-width: 2rem !important;
+    width: 2rem !important;
+    height: 2rem !important;
+    padding: 0 !important;
+    margin-right: 0.3rem !important;
+}
+
+[data-testid="stSidebar"] .stTextInput div[data-baseweb="input"] button[aria-label*="password"] span {
+    color: #111111 !important;
+    font-size: 20px !important;
+}
+
+[data-testid="stSidebar"] .stTextInput div[data-baseweb="input"] button[aria-label*="password"]:hover {
+    background: rgba(17, 51, 175, 0.08) !important;
+    border-radius: 6px !important;
+}
+
+[data-testid="stSidebar"] [data-baseweb="radio"] label {
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 0.25rem 0.45rem;
+    margin-bottom: 0.2rem;
+}
+
+[data-testid="stSidebar"] .stExpander {
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 10px;
+    background: rgba(255,255,255,0.08);
+}
+
+[data-testid="stSidebar"] .stExpander details > summary {
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+.stButton > button,
+.stDownloadButton > button,
+.stFormSubmitButton > button {
+    background: #1133AF;
+    color: #ffffff;
+    border: 1px solid #1133AF;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.stButton > button:hover,
+.stDownloadButton > button:hover,
+.stFormSubmitButton > button:hover {
+    background: #0b2785;
+    border-color: #0b2785;
+    color: #ffffff;
+}
+
+.brand-title {
+    margin-top: 0.4rem;
+    margin-bottom: 0.8rem;
+    color: #1133AF;
+    font-weight: 700;
+}
+
+.sidebar-section-title {
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ffffff !important;
+    letter-spacing: 0.01em;
+}
+
+[class*="st-key-chat-del-"] button {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.45) !important;
+    color: #ffffff !important;
+    border-radius: 999px !important;
+    min-width: 2rem !important;
+    width: 2rem !important;
+    height: 2rem !important;
+    padding: 0 !important;
+    font-size: 1rem !important;
+    line-height: 1 !important;
+}
+
+[class*="st-key-chat-del-"] button:hover {
+    background: #dc3545 !important;
+    border-color: #dc3545 !important;
+    color: #ffffff !important;
+}
+
+[data-testid="stDialog"] [role="dialog"] {
+    border-radius: 14px !important;
+    border: 1px solid rgba(17, 51, 175, 0.25) !important;
+}
+
+[data-testid="stDialog"] [role="dialog"] h1,
+[data-testid="stDialog"] [role="dialog"] h2,
+[data-testid="stDialog"] [role="dialog"] h3 {
+    color: #1133AF !important;
+}

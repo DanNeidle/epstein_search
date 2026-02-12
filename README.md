@@ -49,9 +49,11 @@ This will take a few minutes
 
 Then go to localhost:1997 and you have a fantastic UI and search.
 
-*New AI components (for which many thanks to SH*
+*New AI component (for which many thanks to SH)
 
 ep.py wraps the Elasticsearch API into a command line utility. It's primarily designed to be used by AI agents. It has no dependencies, so no need for a venv. Hashes the first 500 chars of content to flag duplicates (many documents appear across multiple Bates ranges). Stops the AI from reporting the same email three times.
+
+*AI approach 1 - command line*
 
 With almost no setup, Claude will then undertake research in a remarkably easy and useful way. 
 
@@ -59,6 +61,9 @@ Once sist2/es is working, there are just two more steps to use Claude:
 
 1. Install Claude, using this link [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview)
 2. go to your epstein folder and type "claude". Then just ask your question. See claude_example.txt for an example.
+
+*Prototype web ui*
+This is gemini_chat.py. See the file itself for documentation and important caveats.
 
 Standard AI caveats:
 - **OCR quality varies wildly**. Some documents are near-perfect, others are garbled. Always verify findings against the original PDFs via the sist2 links.

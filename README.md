@@ -47,6 +47,8 @@ docker compose exec -T sist2-admin /root/sist2 index \
 
 This will take a few minutes
 
+(These are incremental indexing commands; so if you add more documents, just run them again.)
+
 Then go to localhost:1997 and you have a fantastic UI and search.
 
 *New AI component (for which many thanks to SH)
@@ -63,7 +65,7 @@ Once sist2/es is working, there are just two more steps to use Claude:
 2. go to your epstein folder and type "claude". Then just ask your question. See claude_example.txt for an example.
 
 *Prototype web ui*
-This is gemini_chat.py. See the file itself for documentation and important caveats.
+This is `ai_search/app.py`. See the ai_search folder for documentation.
 
 Standard AI caveats:
 - **OCR quality varies wildly**. Some documents are near-perfect, others are garbled. Always verify findings against the original PDFs via the sist2 links.
